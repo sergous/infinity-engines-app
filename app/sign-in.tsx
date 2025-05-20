@@ -1,21 +1,21 @@
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { ActivityIndicator, View } from "react-native";
-import * as z from "zod";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { ActivityIndicator, View } from 'react-native';
+import * as z from 'zod';
 
-import { SafeAreaView } from "@/components/safe-area-view";
-import { Button } from "@/components/ui/button";
-import { Form, FormField, FormInput } from "@/components/ui/form";
-import { Text } from "@/components/ui/text";
-import { H1 } from "@/components/ui/typography";
-import { useAuth } from "@/context/supabase-provider";
+import { SafeAreaView } from '@/components/safe-area-view';
+import { Button } from '@/components/ui/button';
+import { Form, FormField, FormInput } from '@/components/ui/form';
+import { Text } from '@/components/ui/text';
+import { H1 } from '@/components/ui/typography';
+import { useAuth } from '@/context/supabase-provider';
 
 const formSchema = z.object({
-	email: z.string().email("Please enter a valid email address."),
+	email: z.string().email('Please enter a valid email address.'),
 	password: z
 		.string()
-		.min(8, "Please enter at least 8 characters.")
-		.max(64, "Please enter fewer than 64 characters."),
+		.min(8, 'Please enter at least 8 characters.')
+		.max(64, 'Please enter fewer than 64 characters.'),
 });
 
 export default function SignIn() {
@@ -24,8 +24,8 @@ export default function SignIn() {
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
 		defaultValues: {
-			email: "",
-			password: "",
+			email: '',
+			password: '',
 		},
 	});
 
@@ -40,34 +40,34 @@ export default function SignIn() {
 	}
 
 	return (
-		<SafeAreaView className="flex-1 bg-background p-4" edges={["bottom"]}>
-			<View className="flex-1 gap-4 web:m-4">
-				<H1 className="self-start ">Sign In</H1>
+		<SafeAreaView className='flex-1 bg-background p-4' edges={['bottom']}>
+			<View className='flex-1 gap-4 web:m-4'>
+				<H1 className='self-start '>Sign In</H1>
 				<Form {...form}>
-					<View className="gap-4">
+					<View className='gap-4'>
 						<FormField
 							control={form.control}
-							name="email"
+							name='email'
 							render={({ field }) => (
 								<FormInput
-									label="Email"
-									placeholder="Email"
-									autoCapitalize="none"
-									autoComplete="email"
+									label='Email'
+									placeholder='Email'
+									autoCapitalize='none'
+									autoComplete='email'
 									autoCorrect={false}
-									keyboardType="email-address"
+									keyboardType='email-address'
 									{...field}
 								/>
 							)}
 						/>
 						<FormField
 							control={form.control}
-							name="password"
+							name='password'
 							render={({ field }) => (
 								<FormInput
-									label="Password"
-									placeholder="Password"
-									autoCapitalize="none"
+									label='Password'
+									placeholder='Password'
+									autoCapitalize='none'
 									autoCorrect={false}
 									secureTextEntry
 									{...field}
@@ -78,14 +78,14 @@ export default function SignIn() {
 				</Form>
 			</View>
 			<Button
-				size="default"
-				variant="default"
+				size='default'
+				variant='default'
 				onPress={form.handleSubmit(onSubmit)}
 				disabled={form.formState.isSubmitting}
-				className="web:m-4"
+				className='web:m-4'
 			>
 				{form.formState.isSubmitting ? (
-					<ActivityIndicator size="small" />
+					<ActivityIndicator size='small' />
 				) : (
 					<Text>Sign In</Text>
 				)}

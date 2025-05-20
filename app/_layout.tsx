@@ -1,52 +1,54 @@
-import "../global.css";
+import '../global.css';
 
-import { Stack } from "expo-router";
+import { Stack } from 'expo-router';
 
-import { AuthProvider } from "@/context/supabase-provider";
-import { useColorScheme } from "@/lib/useColorScheme";
-import { colors } from "@/constants/colors";
+import { AuthProvider } from '@/context/supabase-provider';
+import { useColorScheme } from '@/lib/useColorScheme';
+import { colors } from '@/constants/colors';
 
 export default function AppLayout() {
 	const { colorScheme } = useColorScheme();
 
 	return (
 		<AuthProvider>
-			<Stack screenOptions={{ headerShown: false, gestureEnabled: false }}>
-				<Stack.Screen name="(protected)" />
-				<Stack.Screen name="welcome" />
+			<Stack
+				screenOptions={{ headerShown: false, gestureEnabled: false }}
+			>
+				<Stack.Screen name='(protected)' />
+				<Stack.Screen name='welcome' />
 				<Stack.Screen
-					name="sign-up"
+					name='sign-up'
 					options={{
-						presentation: "modal",
+						presentation: 'modal',
 						headerShown: true,
-						headerTitle: "Sign Up",
+						headerTitle: 'Sign Up',
 						headerStyle: {
 							backgroundColor:
-								colorScheme === "dark"
+								colorScheme === 'dark'
 									? colors.dark.background
 									: colors.light.background,
 						},
 						headerTintColor:
-							colorScheme === "dark"
+							colorScheme === 'dark'
 								? colors.dark.foreground
 								: colors.light.foreground,
 						gestureEnabled: true,
 					}}
 				/>
 				<Stack.Screen
-					name="sign-in"
+					name='sign-in'
 					options={{
-						presentation: "modal",
+						presentation: 'modal',
 						headerShown: true,
-						headerTitle: "Sign In",
+						headerTitle: 'Sign In',
 						headerStyle: {
 							backgroundColor:
-								colorScheme === "dark"
+								colorScheme === 'dark'
 									? colors.dark.background
 									: colors.light.background,
 						},
 						headerTintColor:
-							colorScheme === "dark"
+							colorScheme === 'dark'
 								? colors.dark.foreground
 								: colors.light.foreground,
 						gestureEnabled: true,

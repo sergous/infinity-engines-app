@@ -1,9 +1,9 @@
-import { Redirect, Stack } from "expo-router";
+import { Redirect, Stack } from 'expo-router';
 
-import { useAuth } from "@/context/supabase-provider";
+import { useAuth } from '@/context/supabase-provider';
 
 export const unstable_settings = {
-	initialRouteName: "(tabs)",
+	initialRouteName: '(tabs)',
 };
 
 export default function ProtectedLayout() {
@@ -14,7 +14,7 @@ export default function ProtectedLayout() {
 	}
 
 	if (!session) {
-		return <Redirect href="/welcome" />;
+		return <Redirect href='/welcome' />;
 	}
 
 	return (
@@ -23,8 +23,8 @@ export default function ProtectedLayout() {
 				headerShown: false,
 			}}
 		>
-			<Stack.Screen name="(tabs)" />
-			<Stack.Screen name="modal" options={{ presentation: "modal" }} />
+			<Stack.Screen name='(tabs)' />
+			<Stack.Screen name='modal' options={{ presentation: 'modal' }} />
 		</Stack>
 	);
 }

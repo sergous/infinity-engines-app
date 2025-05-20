@@ -1,8 +1,8 @@
-import "react-native-url-polyfill/auto";
+import 'react-native-url-polyfill/auto';
 
-import { AppState } from "react-native";
-import { createClient } from "@supabase/supabase-js";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { AppState } from 'react-native';
+import { createClient } from '@supabase/supabase-js';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL as string;
 const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY as string;
@@ -16,8 +16,8 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 	},
 });
 
-AppState.addEventListener("change", (state) => {
-	if (state === "active") {
+AppState.addEventListener('change', (state) => {
+	if (state === 'active') {
 		supabase.auth.startAutoRefresh();
 	} else {
 		supabase.auth.stopAutoRefresh();

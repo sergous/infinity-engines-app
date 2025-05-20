@@ -4,12 +4,12 @@ import {
 	useContext,
 	useEffect,
 	useState,
-} from "react";
-import { SplashScreen, useRouter } from "expo-router";
+} from 'react';
+import { SplashScreen, useRouter } from 'expo-router';
 
-import { Session } from "@supabase/supabase-js";
+import { Session } from '@supabase/supabase-js';
 
-import { supabase } from "@/config/supabase";
+import { supabase } from '@/config/supabase';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -43,15 +43,15 @@ export function AuthProvider({ children }: PropsWithChildren) {
 		});
 
 		if (error) {
-			console.error("Error signing up:", error);
+			console.error('Error signing up:', error);
 			return;
 		}
 
 		if (data.session) {
 			setSession(data.session);
-			console.log("User signed up:", data.user);
+			console.log('User signed up:', data.user);
 		} else {
-			console.log("No user returned from sign up");
+			console.log('No user returned from sign up');
 		}
 	};
 
@@ -62,15 +62,15 @@ export function AuthProvider({ children }: PropsWithChildren) {
 		});
 
 		if (error) {
-			console.error("Error signing in:", error);
+			console.error('Error signing in:', error);
 			return;
 		}
 
 		if (data.session) {
 			setSession(data.session);
-			console.log("User signed in:", data.user);
+			console.log('User signed in:', data.user);
 		} else {
-			console.log("No user returned from sign in");
+			console.log('No user returned from sign in');
 		}
 	};
 
@@ -78,10 +78,10 @@ export function AuthProvider({ children }: PropsWithChildren) {
 		const { error } = await supabase.auth.signOut();
 
 		if (error) {
-			console.error("Error signing out:", error);
+			console.error('Error signing out:', error);
 			return;
 		} else {
-			console.log("User signed out");
+			console.log('User signed out');
 		}
 	};
 
@@ -101,9 +101,9 @@ export function AuthProvider({ children }: PropsWithChildren) {
 		if (initialized) {
 			SplashScreen.hideAsync();
 			if (session) {
-				router.replace("/");
+				router.replace('/');
 			} else {
-				router.replace("/welcome");
+				router.replace('/welcome');
 			}
 		}
 		// eslint-disable-next-line
