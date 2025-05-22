@@ -8,6 +8,7 @@
 		"android": "expo run:android",
 		"ios": "expo run:ios",
 		"lint": "eslint . --fix",
+		"build": "npx expo export -p web --clear",
 		"generate-colors": "node ./scripts/generate-colors.js && eslint ./constants/colors.ts --fix"
 	},
 	"dependencies": {
