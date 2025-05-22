@@ -1,14 +1,10 @@
-# Expo Supabase Starter
+# InfinityEngines
 
 ![social-preview-dark](https://github.com/user-attachments/assets/9697a7da-10aa-4661-bb76-b5bc0dd611f0)
 
 ## Introduction
 
-This repository serves as a comprehensive starter project for developing React Native and Expo applications with Supabase as the backend. It integrates various technologies such as Expo Router for navigation, Tailwind CSS for styling, React-Hook-Form for form handling, Zod for schema validation, and TypeScript for type safety. By leveraging these powerful tools, this starter template provides a robust foundation for building modern, scalable, and efficient mobile applications.
-
-#### Disclaimer
-
-This is not supposed to be a template, boilerplate or a framework. It is an opinionated guide that shows how to do some things in a certain way. You are not forced to do everything exactly as it is shown here, decide what works best for you and your team and stay consistent with your style.
+InfinityEngines is a versatile club app built with React Native, Expo, and Supabase, designed for various events and business clubs. It connects users by matching their needs—helping form strong teams, linking startups with investors, and facilitating service provision. Key features include AI-generated onboarding surveys (via Grok API), personalized matchmaking recommendations, meeting confirmations, gamification (tokens and badges), and offline mode, ensuring efficient networking and collaboration across diverse communities.
 
 ## Table of Contents
 
@@ -20,8 +16,8 @@ This is not supposed to be a template, boilerplate or a framework. It is an opin
 
 ## Contributing
 
-Contributions to this starter project are highly encouraged and welcome! If you have any suggestions, bug reports, or feature requests, please feel free to create an issue or submit a pull request. Let's work together to enhance the developer experience and make it easier for everyone to build exceptional Expo applications with Supabase.
+Contributions are highly encouraged! If you have suggestions, bug reports, or feature requests, please create an issue or submit a pull request. Let’s collaborate to improve this app and enhance the networking experience across InfinityEngines clubs and events.
 
 ## License
 
-This repository is licensed under the MIT License. You are granted the freedom to use, modify, and distribute the code for personal or commercial purposes. For more details, please refer to the [LICENSE](https://github.com/FlemingVincent/supabase-starter/blob/main/LICENSE) file.
+This repository is licensed under the GNU General Public License v3.0 (GPL-3.0). You are free to use, modify, and distribute the code, provided that any derivative works are also licensed under GPL-3.0. For more details, please refer to the [LICENSE](LICENSE.md) file.
