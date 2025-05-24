@@ -10,7 +10,7 @@ export default function TabsLayout() {
 	return (
 		<Tabs
 			screenOptions={{
-				headerShown: false,
+				headerShown: true,
 				tabBarStyle: {
 					backgroundColor:
 						colorScheme === "dark"
@@ -21,11 +21,13 @@ export default function TabsLayout() {
 					colorScheme === "dark"
 						? colors.dark.foreground
 						: colors.light.foreground,
-				tabBarShowLabel: false,
+				tabBarShowLabel: true,
 			}}
 		>
-			<Tabs.Screen name="index" options={{ title: "Home" }} />
-			<Tabs.Screen name="settings" options={{ title: "Settings" }} />
+			<Tabs.Screen name="index" options={{ title: "Главная" }} />
+			<Tabs.Screen name="matchmaking" options={{ title: "Матчмейкинг" }} />
+			<Tabs.Screen name="profile" options={{ title: "Профиль" }} />
+			<Tabs.Screen name="settings" options={{ title: "Настройки" }} />
 		</Tabs>
 	);
 }

@@ -1,6 +1,9 @@
 import '../global.css';
 
 import { Stack } from 'expo-router';
+// Временно отключаем импорты для PWA
+// import { Platform } from 'react-native';
+// import { useEffect } from 'react';
 
 import { AuthProvider } from '@/context/supabase-provider';
 import { useColorScheme } from '@/lib/useColorScheme';
@@ -9,6 +12,7 @@ import { colors } from '@/constants/colors';
 export default function AppLayout() {
 	const { colorScheme } = useColorScheme();
 
+	// PWA функциональность временно отключена
 	return (
 		<AuthProvider>
 			<Stack

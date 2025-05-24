@@ -8,6 +8,8 @@ export const unstable_settings = {
 
 export default function ProtectedLayout() {
 	const { initialized, session } = useAuth();
+	console.log('session', session);
+	
 
 	if (!initialized) {
 		return null;

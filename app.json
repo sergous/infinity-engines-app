@@ -47,6 +47,30 @@
         }
       }
     },
+    "web": {
+      "favicon": "./assets/icon.png",
+      "name": "ExpoSupabaseStarter",
+      "shortName": "ExpoApp",
+      "description": "Expo Supabase Starter with PWA",
+      "lang": "ru",
+      "themeColor": "#000000",
+      "backgroundColor": "#ffffff",
+      "startUrl": "/",
+      "scope": "/",
+      "barStyle": "default",
+      "display": "standalone",
+      "orientation": "portrait",
+      "splash": {
+        "image": "./assets/splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      },
+      "meta": {
+        "apple": {
+          "touchFullscreen": true
+        }
+      }
+    },
     "experiments": {
       "typedRoutes": true
     },
